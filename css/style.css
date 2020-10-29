@@ -7,9 +7,9 @@ html{
 *::after{
     box-sizing: inherit;
 }
-:root{
-    --accent-color: #2196F3;
-}
+/* :root{
+    --accent-color: #2196F3; 
+}*/
 img {
     display: block;
     max-width: 100%;
@@ -25,7 +25,7 @@ h1, h2, h3, p, a{
 ul {
     padding: 0;
     margin: 0;
-    list-style-type: none;
+    list-style: none;
 }
 
 a {
@@ -46,48 +46,50 @@ a {
 /* HEADER */
 .logo{
     display: flex;
-    padding: 10px 20px 10px 0 ;
+    padding: 20px 20px 20px 0 ;
+    justify-content: space-around;
 
 }
 .header-nav{
     display: flex;
     align-items: center;
     background-color: rgb(88, 97, 102);
-    /* justify-content: space-between; */
+    
 }
-.nav-list{
+ .nav-list{
     display: inline-flex;
-    margin-right: auto;
+    justify-content: space-around;
 }
 .nav-list .link-header{
     display: block;
-    
 }
 
-.nav-list .item{
+/* .link-header:hover{
+    color: #fff;
+} */
+
+ .nav-list .item{
   padding: 20px 5px; 
-  
+ 
+
 }
 .nav-list .item + .item{
-    margin-left: 23px;
+    margin-left: 23px; 
 }
 .link-header.current{
-    /* color: var(--accent-color); */
-    color: red;
+     /* color: var(--accent-color);  */
+     color: red;
 }
-.item:hover,
-.item:focus{
-   
+.link-header:hover,
+.link-header:focus{
+   color: red;
     background-color:green;
     border-radius: 5px;
-    
-    color: white;
-
 } 
 
 .sub-menu{
     display: none;
-    
+      
 }
 .drop-down{
     border: 2px solid #000000;
@@ -100,6 +102,12 @@ a {
     display: block;
     position: absolute;
     
-    margin-top: 15px;
-    margin-left: -15px;
+    margin-top: 20px;
+    margin-left: -5px;
+} 
+
+.nav-list .item:hover  .drop-down:hover,
+.nav-list .item:focus  .drop-down:focus{
+background-color:  red;
+color: #fff;
 }
